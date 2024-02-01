@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #input {
+      width: 45%; 
+      float: left;
+    }
+    #output {
+      width: 45%;
+      float: right;
+    }
+  </style>
+</head>
+<body>
+
+    <h1>Enter your unformatted text here</h1>
+  <textarea id="input" rows="35"></textarea>
+  <h2 style="position: relative; top: -50px; left: 40px;">Output</h2>
+  <pre id="output" style="position:relative; top: -40px; left: -60px;"></pre>
+
+  <script>
+    // Regex patterns
+    const semicolonRegex = /;/g;
+    const braceRegex = /{/g;
+    const rightbraceRegex =/}/g;
+    const newlineRegex = /\n{2,}/g;
+
+    function formatCSS(css) {
+
+      let formatted = css.replace(braceRegex, '{\n   ');
+      formatted = formatted.replace(rightbraceRegex,'}\n \n')
+      formatted = formatted.replace(semicolonRegex, ';\n');
+      formatted = formatted.replace(newlineRegex, '\n');
+
+      return formatted;
+
+    }
+
+    const input = document.getElementById('input');
+    const output = document.getElementById('output');
+
+    input.addEventListener('input', () => {
+      output.textContent = formatCSS(input.value);
+    });
+
+  </script>
+
+</body>
+</html>
