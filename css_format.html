@@ -1,27 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
-    #input {
-      width: 45%; 
-      float: left;
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
     }
-    #output {
-      width: 45%;
-      float: right;
+    
+    h1, h2 {
+      text-align: center; 
+    }
+    
+    #input, #output {
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    
+    @media (min-width: 600px) {
+      #input, #output {
+        width: 45%;
+      }
+      
+      #input {
+        float: left;  
+      }
+       
+      #output {
+        float: right;
+      }
     }
   </style>
+
 </head>
+
 <body>
 
-    <h1>Enter your unformatted text here</h1>
-  <textarea id="input" rows="35"></textarea>
-  <h2 style="position: relative; top: -50px; left: 40px;">Output</h2>
-  <pre id="output" style="position:relative; top: -40px; left: -60px;"></pre>
+  <h1>Enter your unformatted text here</h1>
 
+  <textarea id="input" rows="10"></textarea>
+
+  <h2>Output</h2> 
+  
+  <pre id="output"></pre>
+
+  <!-- same JavaScript -->
   <script>
-    // Regex patterns
-    const semicolonRegex = /;/g;
+     // Regex patterns
+     const semicolonRegex = /;/g;
     const braceRegex = /{/g;
     const rightbraceRegex =/}/g;
     const newlineRegex = /\n{2,}/g;
@@ -43,7 +73,6 @@
     input.addEventListener('input', () => {
       output.textContent = formatCSS(input.value);
     });
-
   </script>
 
 </body>
