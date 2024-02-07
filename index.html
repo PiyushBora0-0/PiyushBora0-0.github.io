@@ -11,21 +11,27 @@
 
 
         .bgimage {
-            height: 100vh;
-            width: 100%;
-            position: relative;
-           
-        }
-
-        .bgimage::before {
-            content: "";
-            background: url('/images/heroimage.jpg') center/cover;
+            /* height: 100vh;
+            width: 100%; */
+            /* position: relative; */
+            background: url('/images/heroimage.jpg') center;
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;  
-            filter: blur(5px); /* Adjust the blur value as needed */
+            max-width:100%;
+            background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;  
+
+           
+        }
+
+        .bgimage::before {
+            content: "";
+            filter: blur(5px); 
+            /* Adjust the blur value as needed */
             z-index: -1;
         }
 
@@ -54,10 +60,17 @@
             left: 290px
         }
 
+        .navbar{
+            
+            background-color: hsla(0, 0%, 0%, 0.3);
+            box-shadow: 0px 10px 30px black;
+        }
     </style>
 </head>
 
 <body>
+    <div id="mydiv">
+        
     <nav class="navbar navbar-expand-lg fixed-top navbarScroll">
         <div class="container">
             <a class="navbar-brand" href="#">Piyush</a>
@@ -86,17 +99,21 @@
             </div>
         </div>
     </nav>
+
+    </div>
     <section class="bgimage" id="home">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
                     <h2 class="hero_title">Hi, it's me Piyush</h2>
                     <p class="hero_desc">Tech Explorer and Problem Solver <p class = "some_div">(sometimes ッ)</p></p>
-                   
+                    <p >Will fix the layout soon, for now check what i am learning in Learning page.</p>
                 </div>
             </div>
         </div>
+        
     </section>
+    
     
     
 </body>
