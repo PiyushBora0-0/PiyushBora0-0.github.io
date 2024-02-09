@@ -10,6 +10,6 @@ function roll(){
         values.push(value);
         images.push(`<img src="images/${value}.png" alt ="Dice ${values}" >`);
     }
-    diceResult.textContent = "Dice : "+values.join(' , ');
+    diceResult.textContent = "Dice   : "+values.join(' , ');
     diceImages.innerHTML =  images.join('');
 }
