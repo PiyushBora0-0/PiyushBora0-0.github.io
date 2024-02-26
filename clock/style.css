@@ -1,0 +1,35 @@
+body{
+    background-image: url(/mashle.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: CloisterBlack;
+    
+}
+    
+    
+
+@font-face {
+    
+    font-family: CloisterBlack ;
+    src: url(/CloisterBlack.ttf);
+    
+}
+
+.clock-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    /* width:96.5%; */
+}
+
+.clock{
+    font-size: 6rem;
+    text-align: center;
+    width: 100%;
+    text-shadow: 2px 2px 5px hwb(0 0% 0%);
+
+}
