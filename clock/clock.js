@@ -8,5 +8,6 @@ function updateClock(){
     document.getElementById("clock").textContent = `${hrs}:${min}:${sec}`;
   
 }
+
 updateClock();
 setInterval(updateClock,1000)
