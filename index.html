@@ -14,26 +14,22 @@
             /* height: 100vh;
             width: 100%; */
             /* position: relative; */
-            background: url('/images/heroimage.jpg') center;
+            background: url('/images/heroimage.jpg') ;
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;  
-            max-width:100%;
-            background-size:     cover;                      /* <------ */
-    background-repeat:   no-repeat;
-    background-position: center center;  
+            min-width: 200rem;
+            max-width: 100%;
+              /* Full height */
+    min-height: 100%;
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
            
         }
 
-        .bgimage::before {
-            content: "";
-            filter: blur(5px); 
-            /* Adjust the blur value as needed */
-            z-index: -1;
-        }
+       
 
         .hero-text {
             text-align: center;
@@ -61,6 +57,7 @@
         }
 
         .navbar{
+            max-width: 100%;
             
             background-color: hsla(0, 0%, 0%, 0.3);
             box-shadow: 0px 10px 30px black;
