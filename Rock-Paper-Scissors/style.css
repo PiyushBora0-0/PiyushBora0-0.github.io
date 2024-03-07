@@ -1,0 +1,53 @@
+body{
+    background-color:rgb(253, 241, 227);
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1{
+    font-size: 3rem;
+    color: hsl(0, 0%, 14%);
+    
+}
+button{
+    
+    border-width: 0;
+    background-color: hsl(202, 100%, 64%);
+    font-size: 5rem;
+    text-shadow: 3px 3px 5px hsla(0, 0%, 0%, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 10px;
+    height: 1.5em;
+    box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.34);
+
+}
+button:hover{
+    background-color: hsl(202, 100%, 54%);
+
+}
+button:active{
+    background-color: hsl(202, 100%, 64%);
+}
+
+p{  
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 10px;
+    padding: 0px;
+}
+
+#result{
+    margin: 30px;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.greenText{
+    color: hsl(120, 100%, 50%);
+}
+.redText{
+    color: hsl(0, 100%, 50%);
+}
